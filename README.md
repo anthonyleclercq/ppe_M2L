@@ -1,4 +1,4 @@
-# ppe_M2L
+﻿# ppe_M2L
 projet de développement ppe pour le bts
 
 Accès au site:
@@ -13,3 +13,7 @@ Accès au serveur SFTP:
   Port: 22
   Protocole: SFTP
   user: u40673691-M2LAnthony
+
+Modification de la structure:
+Maintenant toutes modifications seront éffectuées sur la branche preprod. Aucune modification apportée au projet ne doit être mis
+sur la branche master sans avoir était validée sur la branche preprod.
