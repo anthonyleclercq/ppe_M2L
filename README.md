@@ -7,11 +7,9 @@ Accès au site:
 Accès à la base de données:
   http://m2l.famille-leclercq.fr/phpmyadmin
   id: m2l
-  pwd: M2L@nth0ny
 
 Accès au serveur SFTP:
   Host: home169076147.1and1-data.host
   Port: 22
   Protocole: SFTP
   user: u40673691-M2LAnthony
-  pwd: M2L@nth0ny
