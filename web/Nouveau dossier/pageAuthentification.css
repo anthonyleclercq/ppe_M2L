@@ -1,0 +1,10 @@
+.zoneTitre {
+	clear:left;
+	float:left;
+	width:150px;
+}
+
+.zoneChamp {
+	float:left;
+	vertical-align:center;
+}
