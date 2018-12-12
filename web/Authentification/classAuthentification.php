@@ -71,14 +71,22 @@ function getErreur() { return $this->erreur;}
 		if ($this->erreur=="") { //s'il n'y a pas eu d'erreur de connexion
 			if ($this->mode=="bdd" ) {
 				$requete = "select count(*) as nbRep from $this->table where $this->champId='$pId' and $this->champPasse=";
-				if ($this->nivoSecu=="md5") {$requete .= "md5('$pPasse')";} else {$requete .= "'$pPasse'";}
+				if ($this->nivoSecu=="md5") {
+					$requete .= "md5('$pPasse')";
+				} else {
+					$requete .= "'$pPasse'";
+				}
+				
 				$rs = mysqli_query($this->connexion,$requete) or die($this->erreur="Echec Requete");
 				$reponse = mysqli_fetch_array($rs); 			
-				if ($reponse["nbRep"] == 1 ) // Retourne vrai s'il y a un résultat correspondant
-					{$retour = true;}
-				else
-					{$this->erreur = "Identifiants incorrects";}
-				mysqli_close($this->connexion  );
+				if ($reponse["nbRep"] == 1 ) { // Retourne vrai s'il y a un résultat correspondant
+						$retour = true;
+				}
+				else {
+					$this->erreur = "Identifiants incorrects";
+				}
+				
+				mysqli_close($this->connexion);
 			}
 			else //on est sur un annuaire
 			{	//se connecte à la machine
