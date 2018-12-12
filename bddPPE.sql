@@ -3,13 +3,17 @@ USE db761899254;
 
 CREATE TABLE `CABINET` (
 	`id_cabinet` smallint primary key NOT NULL AUTO_INCREMENT,
-	`adresse_Cabinet` varchar(255)
+	`adresse_Cabinet` varchar(255),
+	`email_cabinet` varchar(255),
+	`password_cabinet` varchar (100) 
 )ENGINE=INNODB;
 
 CREATE TABLE `MEDECIN` (
 	`id_medecin` smallint primary key NOT NULL AUTO_INCREMENT,
 	`nom_medecin` varchar(100),
 	`prenom_medecin` varchar(100),
+	`email_medecin` varchar(255),
+	`password_medecin` varchar (100),
 	`id_cabinet` smallint
 )ENGINE=INNODB;
 
@@ -17,7 +21,9 @@ CREATE TABLE `MEDECIN` (
 CREATE TABLE `VISITEUR` (
 	`id_visiteur` smallint primary key NOT NULL AUTO_INCREMENT,
 	`nom_visiteur` varchar(100),
-	`prenom_visiteur` varchar(100)
+	`prenom_visiteur` varchar(100),
+	`email_visiteur` varchar (255),
+	`password_visiteur` varchar (255)
 )ENGINE=INNODB;
 
 CREATE TABLE `VISITE` (
