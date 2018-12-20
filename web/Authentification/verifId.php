@@ -25,11 +25,11 @@
 			//vérifie l'identité de la personne grâce aux coordonnées fournies ou retourne vers l'identification en indiquant l'erreur
 			if ($cnx->verifId($_SESSION["id"],$_SESSION["passe"])) {
 				unset($_SESSION["resultat"]);
-				header("Location:Reussi.html");
+				header("acceui!.php");
 			}
 			else {
 				$_SESSION["resultat"]=$cnx->getErreur();
-				header("Location:testId.php");
+				header("index.php");
 			}
 		}
 		else {

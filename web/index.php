@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>toto</title>
-</head>
-<body>
-	<p>Hello world !!!</p>
+	<head>
+		<title>M2L</title>
+	</head>
+	
+	<body>
+		<p>Hello world !!!</p>
 
-	<?php require "Tri/jscriptClasser.php"; ?>
+		<br/> <br/> <br/>
 
-	<br/> <br/> <br/>
+		<?php require "Authentification/testID.php"; ?>
 
-	<?php require "Authentification/testID.php"; ?>
-
-</body>
+	</body>
 </html>
